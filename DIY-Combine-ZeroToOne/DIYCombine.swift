@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+func diyCombine(with url: URL) {
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        if let data = data {
+            // 處理 data...
+            print(data)
+        }
+    }
+
+    task.resume()
+}
